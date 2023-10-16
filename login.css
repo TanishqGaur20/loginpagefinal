@@ -1,0 +1,331 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000021;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.full {
+    height: 500px;
+    width: 1000px;
+    background-color: #12123E;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    box-shadow: 6px 6px 20px rgb(170, 107, 228);
+
+}
+
+.full img {
+    animation: Imagepop 5s linear infinite;
+}
+
+@keyframes Imagepop {
+    0% {
+        transform: scale(1, 1);
+    }
+
+    50% {
+        transform: scale(1.04, 1.04);
+    }
+
+    100% {
+        transform: scale(1, 1);
+    }
+}
+
+
+.left {
+    height: 400px;
+    width: 400px;
+    background-color: red;
+    position: relative;
+}
+
+
+
+.form {
+    height: 400px;
+    width: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    font-weight: 600;
+    position: relative;
+    color: black
+}
+
+
+
+.form h2 {
+    position: absolute;
+    top: -20px;
+    left: 40px;
+    color: #FCB13A;
+    filter: drop-shadow(2px 2px 2px rgba(55, 18, 238, 1));
+}
+
+
+
+.form h2::after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 4px;
+    background-color: #08334C;
+    top: 55px;
+    right: 0;
+}
+
+.form h2:hover {
+    cursor: context-menu;
+}
+
+
+.form h2:hover::after {
+    animation: lineanims 2s linear;
+}
+
+@keyframes lineanims {
+    0% {
+        width: 0%;
+        right: 0;
+    }
+
+    50% {
+        width: 100%;
+        right: 0%;
+    }
+
+    100% {
+        width: 0%;
+        left: 0;
+    }
+}
+
+
+.innerbox {
+    height: 350px;
+    width: 350px;
+    /* background-color: #1d5a80; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    font-weight: 600;
+    position: relative;
+    padding: 20px 12px 12px 12px;
+    margin-top: 70px;
+}
+
+.name {
+    height: 35%;
+    width: 100%;
+}
+
+.password {
+    height: 35%;
+    width: 100%;
+    /* background-color: #78b5e3; */
+}
+
+.submit {
+    height: 22%;
+    width: 100%;
+    /* background-color: #ac7777; */
+}
+
+.signup {
+    height: 22%;
+    width: 100%;
+    /* background-color: greenyellow; */
+    display: flex;
+}
+
+.name p {
+    position: absolute;
+    top: 40px;
+    left: 70px;
+    /* color: #5653A4; */
+    color: #AA6BE4;
+}
+
+.name input {
+    position: absolute;
+    top: 75px;
+    left: 70px;
+    height: 25px;
+
+}
+
+.name i {
+    font-size: 15px;
+    position: absolute;
+    left: 157px;
+    top: 39px;
+    color: #ffffff;
+}
+
+input:active {
+    box-shadow: #3c4fe0 0 3px 7px inset;
+    transform: translateY(1px);
+    transition: box-shadow .15s, transform .15s;
+
+}
+
+
+input {
+    text-align: center;
+    border-radius: 5px;
+    /* box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.5); */
+    font-family: 'Ubuntu', sans-serif;
+}
+
+
+
+p {
+    font-size: 15px;
+}
+
+.FORM {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.password p {
+    position: absolute;
+    left: 70px;
+    color: #AA6BE4;
+}
+
+.password input {
+    top: 155px;
+    left: 70px;
+    position: absolute;
+    height: 25px;
+}
+
+.password i {
+    font-size: 15px;
+    position: absolute;
+    left: 180px;
+    top: 126px;
+    color: #ffffff;
+
+}
+
+.submit input {
+    background-image: radial-gradient(100% 100% at 100% 0, #5adaff 0, #5468ff 100%);
+    border: 0;
+    border-radius: 6px;
+    box-shadow: rgba(45, 35, 66, .4) 0 2px 4px, rgba(45, 35, 66, .3) 0 7px 13px -3px, rgba(58, 65, 111, .5) 0 -3px 0 inset;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    font-family: "JetBrains Mono", monospace;
+    height: 40px;
+
+    line-height: 1;
+
+    overflow: hidden;
+    padding-left: 16px;
+    padding-right: 16px;
+
+    text-decoration: none;
+    transition: box-shadow .15s, transform .15s;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    white-space: nowrap;
+    will-change: box-shadow, transform;
+    font-size: 18px;
+    position: absolute;
+    left: 110px;
+    top: 220px;
+}
+
+
+.submit input:hover {
+    box-shadow: rgba(45, 35, 66, .4) 0 4px 8px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;
+    transform: translateY(-2px);
+}
+
+.submit input:focus {
+    box-shadow: #3c4fe0 0 0 0 1.5px inset, rgba(45, 35, 66, .4) 0 2px 4px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;
+}
+
+.submit input:active {
+    box-shadow: #3c4fe0 0 3px 7px inset;
+    transform: translateY(2px);
+}
+
+
+.submit input:hover {
+    background-color: rgb(154, 51, 228);
+    cursor: pointer;
+}
+
+.signup p {
+    font-size: 15px;
+    position: absolute;
+    bottom: 15px;
+    left: 70px;
+    color: white;
+
+}
+
+.signup a {
+    font-size: 20px;
+    position: absolute;
+    bottom: 15px;
+    left: 250px;
+    color: #FCB13A;
+}
+
+.socials {
+    width: 150px;
+    background-color: transparent;
+    border-radius: 10px;
+    position: fixed;
+    display: flex;
+    transition: .5s ease;
+    position: absolute;
+    justify-content: space-evenly;
+    top: 280px;
+    left: 85px;
+    color: white;
+
+}
+
+.socials div {
+    transition: 0.4s linear;
+
+}
+
+.socials div:hover {
+    transform: translateY(-3px);
+}
+
+a {
+    transition: 0.4s linear;
+    color: white;
+}
+
+a:hover {
+    transform: translateY(-2px);
+}
